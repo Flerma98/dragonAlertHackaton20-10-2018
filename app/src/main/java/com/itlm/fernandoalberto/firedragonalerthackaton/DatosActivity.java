@@ -43,7 +43,7 @@ public class DatosActivity extends AppCompatActivity {
                     Datos dato= snapshot.getValue(Datos.class);
                     if(dato.getFuego()==1){
                         AlertDialog.Builder builder = new AlertDialog.Builder(DatosActivity.this);
-                        builder.setMessage("HAY FUEGO EN EL SENSOR (" + dato.getID() + ")");
+                        builder.setMessage("HAY FUEGO EN EL SENSOR (" + dato.getID() + ")\n\nACTIVANDO SISTEMA DE RIEGO AUTOMATICO");
                         AlertDialog alert = builder.create();
                         alert.show();
                     }
