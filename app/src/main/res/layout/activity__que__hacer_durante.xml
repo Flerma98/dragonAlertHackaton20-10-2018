@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/incendio_forestal"
+    tools:context=".Activity_Que_Hacer_durante">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="•   Guarda la calma."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="•   Evalúa la situación, trata de ver que se quema, en qué cantidad, el sitio donde está el fuego y si éste puede propagarse."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="•   Da la voz de alarma, primero a los bomberos y posteriormente a las personas más cercanas."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:text="•   Trata de controlar la situación retirando a las personas a un lugar seguro o utilizando un extintor."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="•   Debes evacuar el área del incendio inmediatamente."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="•   Mientras evacúas, nunca le des la espalda al fuego, observando permanentemente cómo se comporta."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:text="•   Si en las cercanías de tu hogar hay un incendio forestal, toma las precauciones y prepárate para evacuar."/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

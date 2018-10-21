@@ -4,58 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondorojo"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bienvenido"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:layout_marginTop="50sp"
-            android:textStyle="bold"
-            android:textSize="40sp"/>
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:textAlignment="center"
-            android:id="@+id/txtRNombre"
-            android:textColor="#ffffff"
-            android:inputType="textPersonName"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="348dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/logo4" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtRCorreo"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:hint="Correo"
-            android:inputType="textEmailAddress"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿ Qué hacer antes ?"
+                android:textAllCaps="false"
+                android:id="@+id/btnQHA"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Registrar"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="20sp"
-            android:id="@+id/btnRegistrar"
-            android:layout_marginHorizontal="30sp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿ Qué hacer durante ?"
+                android:id="@+id/btnQHDU"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
 
-    </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿ Qué hacer después ?"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:id="@+id/btnQHDE"
+                android:textAllCaps="false"
+                android:textSize="30sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:text="Teléfonos de Emergencia"
+                android:textAllCaps="false"
+                android:textSize="30sp"
+                android:id="@+id/btnTE"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos"
+                android:textAlignment="center"
+                android:background="#aba5a5"
+                android:textColor="#610b0f"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvDatos" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

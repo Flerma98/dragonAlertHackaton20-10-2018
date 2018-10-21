@@ -1,10 +1,14 @@
 package com.itlm.fernandoalberto.firedragonalerthackaton;
 
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.app.Notification.Builder;
+import android.app.NotificationManager;
 import android.widget.Button;
 import android.widget.EditText;
 

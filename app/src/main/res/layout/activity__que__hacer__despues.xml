@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/incendio_forestal"
+    tools:context=".Activity_Que_Hacer_Despues">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="•  Tengamos cuidado cuando volvamos a entrar en un área natural quemada. Los sitios calientes pueden volver a prenderse sin previo aviso."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="•  Entreguemos la mayor cantidad de información de lo sucedido al Cuerpo de Bomberos y a las autoridades de respuesta."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="•  Regresemos a nuestras casas cuando las autoridades de emergencia así lo indiquen."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:text="•  Revisemos nuestras casas en busca de humo o chispas prendidas ocultas."/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
