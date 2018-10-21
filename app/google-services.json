@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "561724521046",
+    "firebase_url": "https://dragonfirealert-itlm.firebaseio.com",
+    "project_id": "dragonfirealert-itlm",
+    "storage_bucket": "dragonfirealert-itlm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561724521046:android:305c71741ee76bde",
+        "android_client_info": {
+          "package_name": "com.itlm.fernandoalberto.firedragonalerthackaton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561724521046-8altek111pf3p4bqtfe1e8lqsbea7u3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itlm.fernandoalberto.firedragonalerthackaton",
+            "certificate_hash": "ac1b98e4cfc821aaeb364b445f2331707ee53db8"
+          }
+        },
+        {
+          "client_id": "561724521046-qcqan0h0frflo3f39ql5q58vbh644kvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTOvQVKIHfAdfu5nPxue2U3WOI9ii_YlQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561724521046-qcqan0h0frflo3f39ql5q58vbh644kvn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
