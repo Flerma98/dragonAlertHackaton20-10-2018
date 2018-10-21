@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Datos"
+                android:text="Sensor"
                 android:textAlignment="center"
                 android:background="#aba5a5"
                 android:textColor="#610b0f"

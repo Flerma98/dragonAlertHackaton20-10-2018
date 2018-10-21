@@ -32,7 +32,6 @@ public class AdapterRVDatos extends RecyclerView.Adapter<AdapterRVDatos.Datosvie
         }else{
             datosviewHolder.txtFuego.setText("No hay Fuego");
         }
-        datosviewHolder.txtCantidad.setText("Cantidad: " + dato.getCantidad());
         datosviewHolder.txtGradosC.setText(dato.getGradosC() + "°C");
         datosviewHolder.txtGradosF.setText(dato.getGradosF() + "°Fh");
         datosviewHolder.txtHumedad.setText("H: " + dato.getHumedad());
@@ -48,13 +47,12 @@ public class AdapterRVDatos extends RecyclerView.Adapter<AdapterRVDatos.Datosvie
 
     public static class DatosviewHolder extends RecyclerView.ViewHolder{
 
-        TextView txtID, txtFuego, txtCantidad, txtGradosC, txtGradosF, txtHumedad, txtFecha, txtHora;
+        TextView txtID, txtFuego, txtGradosC, txtGradosF, txtHumedad, txtFecha, txtHora;
 
         public DatosviewHolder(View itemView) {
             super(itemView);
             txtID= (TextView)itemView.findViewById(R.id.txtRVID);
             txtFuego= (TextView)itemView.findViewById(R.id.txtRVFuego);
-            txtCantidad= (TextView)itemView.findViewById(R.id.txtRVCantidad);
             txtGradosC= (TextView)itemView.findViewById(R.id.txtRVGradosC);
             txtGradosF= (TextView)itemView.findViewById(R.id.txtRVGradosF);
             txtHumedad= (TextView)itemView.findViewById(R.id.txtRVHumedad);

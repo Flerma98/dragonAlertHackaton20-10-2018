@@ -2,10 +2,12 @@ package com.itlm.fernandoalberto.firedragonalerthackaton;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.app.PendingIntent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.app.NotificationManager;
 import android.os.Environment;
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
@@ -14,6 +16,8 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.os.EnvironmentCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -44,6 +48,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     Button btnQHA, btnQHDU, btnQHDE, btnTE;
+    NotificationCompat.Builder notification;
+    private static final int idUnica= 51623;
 
     RecyclerView rv;
     ArrayList<Datos> datos;
@@ -53,20 +59,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BaseHelper baseHelper = new BaseHelper(this, "UsuarioRegistrado", null, 1);
-        SQLiteDatabase db = baseHelper.getWritableDatabase();
-        if (db != null) {
-            Cursor c= db.rawQuery("select * from Usuario", null);
-            if(c.moveToFirst()) {
-                if(c.getInt(0)==0){
-                    startActivity(new Intent(MainActivity.this, Registrar_Usuario.class));
-                }
-            }
-        }
         btnQHA= (Button)findViewById(R.id.btnQHA);
         btnQHDE= (Button)findViewById(R.id.btnQHDE);
         btnQHDU= (Button)findViewById(R.id.btnQHDU);
         btnTE= (Button)findViewById(R.id.btnTE);
+
+        notification= new NotificationCompat.Builder(this);
+        notification.setAutoCancel(true);
+
 
         btnQHA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,8 +112,18 @@ public class MainActivity extends AppCompatActivity {
                         dataSnapshot.getChildren()){
                     Datos dato= snapshot.getValue(Datos.class);
                     if(dato.getFuego()==1){
+                        notification.setSmallIcon(R.drawable.logo4);
+                        notification.setTicker("ALERTA");
+                        notification.setWhen(System.currentTimeMillis());
+                        notification.setContentTitle("ALERTA DE FUEGO");
+                        notification.setContentText("Se detectó fuego en el sensor (" + dato.getID() + ")");
+                        Intent intent= new Intent(MainActivity.this, MainActivity.class);
+                        PendingIntent pendingIntent= PendingIntent.getActivity(MainActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                        notification.setContentIntent(pendingIntent);
+                        NotificationManager nm =(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+                        nm.notify(idUnica,notification.build());
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setMessage("HAY FUEGO EN EL SENSOR (" + dato.getID() + ")\n\nACTIVANDO SISTEMA DE RIEGO AUTOMATICO");
+                        builder.setMessage("HAY FUEGO EN EL SENSOR (" + dato.getID() + ")\n\nPORFAVOR TOME PRECAUCIONES");
                         AlertDialog alert = builder.create();
                         alert.show();
                     }
@@ -126,20 +136,6 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-    }
-    public void Limpiar(){
-        BaseHelper baseHelper = new BaseHelper(MainActivity.this, "UsuarioRegistrado", null, 1);
-        SQLiteDatabase db = baseHelper.getWritableDatabase();
-        db.execSQL("delete from Usuario");
-        Toast.makeText(MainActivity.this, "Tabla limpiada", Toast.LENGTH_SHORT).show();
-        if (db != null) {
-            ContentValues registronuevo = new ContentValues();
-            registronuevo.put("Registrado", 0);
-            long i = db.insert("Usuario", null, registronuevo);
-            if (i > 0) {
-                //Toast.makeText(this, "Registro Nuevo Insertado", Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 
 }

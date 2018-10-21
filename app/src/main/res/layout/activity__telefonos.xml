@@ -32,7 +32,9 @@
                 android:text="Llamar a Bomberos"
                 android:textAllCaps="false"
                 android:id="@+id/btnBomb"
-                android:background="#2d2d2d"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:background="#09392f"
                 android:textColor="#ffffff"
                 android:layout_marginHorizontal="20dp" />
 
@@ -51,8 +53,10 @@
                 android:text="Llamar a Emergencias"
                 android:textAllCaps="false"
                 android:id="@+id/btnEmergencia"
-                android:background="#2d2d2d"
                 android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:background="#09392f"
                 android:layout_marginHorizontal="20dp" />
 
         </LinearLayout>
